@@ -6,9 +6,9 @@ Option Explicit
 ' **********************************************
 
 Sub editHeaderFooter()
-    Dim wb As Workbook: Set wb = ActiveWorkbook
+    Dim WB As Workbook: Set WB = ActiveWorkbook
     Dim ws As Worksheet
-    For Each ws In wb.Worksheets
+    For Each ws In WB.Worksheets
         With ws.PageSetup
             .LeftHeader = ""
             .CenterHeader = "&""ＭＳ ゴシック,標準""&9&F_&A"   ' 上段中央にブック名・シート名
