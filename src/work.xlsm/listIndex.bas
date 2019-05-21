@@ -24,18 +24,18 @@ Sub listIndex()
     
     Dim wbIn As Workbook: Set wbIn = ActiveWorkbook
     Dim wsIn As Worksheet, i As Long
-    For i = 1 To wbIn.Worksheets.Count
+    For i = 1 To wbIn.Worksheets.count
         Set wsIn = wbIn.Worksheets(i)
         
-        wsOut.Hyperlinks.Add anchor:=wrOut, Address:="", SubAddress:=wsIn.Name & "!A1", _
-                            ScreenTip:=" ", TextToDisplay:=wsIn.Name
+        wsOut.Hyperlinks.Add anchor:=wrOut, Address:="", SubAddress:=wsIn.name & "!A1", _
+                            ScreenTip:=" ", TextToDisplay:=wsIn.name
         
         Set wrOut = wrOut.Offset(1, 0)
     Next i
     
     ' フォントを適用
     With wsOut.Range(wrOutStart, wrOut).Font
-        .Name = FONT_NAME
+        .name = FONT_NAME
         .Size = FONT_SIZE
         .Color = FONT_COLOR
     End With

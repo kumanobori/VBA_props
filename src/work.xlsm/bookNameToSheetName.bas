@@ -8,18 +8,18 @@ Option Explicit
 ' *********************************
 
 Sub booknameToSheetnameOnAllBooks()
-    Dim wb As Workbook
-    For Each wb In Workbooks
-        Call renameSheetnameIfBookHasOnlyOneSheet(wb)
-    Next wb
+    Dim WB As Workbook
+    For Each WB In Workbooks
+        Call renameSheetnameIfBookHasOnlyOneSheet(WB)
+    Next WB
 End Sub
 
-Private Function renameSheetnameIfBookHasOnlyOneSheet(wb As Workbook)
-    If wb.Worksheets.Count = 1 Then
-        Call bookNameToSheetName(wb.Worksheets(1))
+Private Function renameSheetnameIfBookHasOnlyOneSheet(WB As Workbook)
+    If WB.Worksheets.count = 1 Then
+        Call bookNameToSheetName(WB.Worksheets(1))
     End If
 End Function
 
 Private Function bookNameToSheetName(ws As Worksheet)
-    ws.Name = Replace(ws.Parent.Name, InStrRev(ws.Parent.Name, "."), "")
+    ws.name = Replace(ws.Parent.name, InStrRev(ws.Parent.name, "."), "")
 End Function

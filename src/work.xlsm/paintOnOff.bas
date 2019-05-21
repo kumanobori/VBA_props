@@ -13,7 +13,7 @@ Sub paintInterior()
     Dim MAX_COUNT As Long: MAX_COUNT = 10
     
     
-    If Selection.Count > MAX_COUNT Then
+    If Selection.count > MAX_COUNT Then
         MsgBox "paintInterior: 選択中のセル数が" & MAX_COUNT & "を超えています。処理を行わず終了します。"
         End
     End If

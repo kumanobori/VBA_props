@@ -35,9 +35,9 @@ Sub prepareView()
     End Select
     
     ' 各シートに、表示方法を適用
-    Dim wb As Workbook: Set wb = ActiveWorkbook
+    Dim WB As Workbook: Set WB = ActiveWorkbook
     Dim ws As Worksheet
-    For Each ws In wb.Worksheets
+    For Each ws In WB.Worksheets
         ws.Activate
         ActiveWindow.View = viewType
         ActiveWindow.Zoom = zoomRate
@@ -46,9 +46,9 @@ Sub prepareView()
     
     ' シートのうち、可視かつ一番左のものを選択
     Dim i As Long
-    For i = 1 To wb.Worksheets.Count
-        If wb.Worksheets(i).Visible Then
-            wb.Select
+    For i = 1 To WB.Worksheets.count
+        If WB.Worksheets(i).Visible Then
+            WB.Select
             End
         End If
     Next i
