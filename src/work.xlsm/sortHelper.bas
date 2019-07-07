@@ -42,6 +42,7 @@ Sub sortHelper()
             MsgBox "ソート範囲を取得できませんでした。" & vbCrLf & _
                    "ソート範囲をヘッダ行込みで選択するか、" & vbCrLf & _
                    "ソート範囲のアドレスを記入したセルを選択した状態で実行してください。"
+            End
         End If
     End If
         
