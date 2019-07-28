@@ -1,25 +1,39 @@
 Attribute VB_Name = "paintOnOff"
 Option Explicit
-
 ' ********************************************************************************
 ' * 選択しているセル全てに対して、色無しのセルは指定色、指定色のセルは色無しに塗り替える。
 ' * 暴走防止措置として、一定数以上のセルを選択しているときは処理しない。
 ' ********************************************************************************
-Sub paintInterior()
+Sub paintOnOff()
+    
+    
+    
+    Dim result As Variant
+    result = fn_paintOnOff(Selection)
+    
+    If Not result(0) Then
+        MsgBox result(1)
+    End If
+    
+    
+End Sub
+
+' @param targetRange これに含まれるセル全てを、色反転の対象とする。
+' @return Array(result as boolean, message as string)
+Public Function fn_paintOnOff(targetRange As Range)
     
     ' 設定: 指定色を定義
     Dim TARGET_COLOR As Long: TARGET_COLOR = RGB(255, 255, 0)  ' 黄色
-    ' 設定:
-    Dim MAX_COUNT As Long: MAX_COUNT = 10
+    Dim MAX_COUNT As Long: MAX_COUNT = 100
     
     
-    If Selection.count > MAX_COUNT Then
-        MsgBox "paintInterior: 選択中のセル数が" & MAX_COUNT & "を超えています。処理を行わず終了します。"
-        End
+    If targetRange.count > MAX_COUNT Then
+        fn_paintOnOff = Array(False, "paintOnOff: 選択中のセル数が" & MAX_COUNT & "を超えています。処理を行わず終了します。")
+        Exit Function
     End If
     
     Dim wr As Range
-    For Each wr In Selection
+    For Each wr In targetRange
         ' 無色の場合は指定色に
         If wr.Interior.ColorIndex = xlNone Then
             wr.Interior.Color = TARGET_COLOR
@@ -30,6 +44,7 @@ Sub paintInterior()
             End If
         End If
     Next wr
-    
-End Sub
+    fn_paintOnOff = Array(True)
+End Function
+
 
