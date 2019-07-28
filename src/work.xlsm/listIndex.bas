@@ -27,15 +27,15 @@ Sub listIndex()
     For i = 1 To wbIn.Worksheets.count
         Set wsIn = wbIn.Worksheets(i)
         
-        wsOut.Hyperlinks.Add anchor:=wrOut, Address:="", SubAddress:=wsIn.name & "!A1", _
-                            ScreenTip:=" ", TextToDisplay:=wsIn.name
+        wsOut.Hyperlinks.Add anchor:=wrOut, Address:="", SubAddress:=wsIn.Name & "!A1", _
+                            ScreenTip:=" ", TextToDisplay:=wsIn.Name
         
         Set wrOut = wrOut.Offset(1, 0)
     Next i
     
     ' フォントを適用
     With wsOut.Range(wrOutStart, wrOut).Font
-        .name = FONT_NAME
+        .Name = FONT_NAME
         .Size = FONT_SIZE
         .Color = FONT_COLOR
     End With
