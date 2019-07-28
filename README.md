@@ -22,3 +22,6 @@ sort without GUI settings
 ## src/prepareAppearance.bas
 set display size, display mode, selected cell, on all sheets
 
+## src/searchAndPaint.bas
+find string and paint cells found 
+
