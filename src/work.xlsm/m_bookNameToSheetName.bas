@@ -1,4 +1,4 @@
-Attribute VB_Name = "bookNameToSheetName"
+Attribute VB_Name = "m_bookNameToSheetName"
 Option Explicit
 
 ' *********************************

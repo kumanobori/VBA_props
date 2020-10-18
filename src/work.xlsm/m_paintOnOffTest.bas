@@ -1,4 +1,4 @@
-Attribute VB_Name = "paintOnOffTest"
+Attribute VB_Name = "m_paintOnOffTest"
 Option Explicit
 Option Private Module
 

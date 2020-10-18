@@ -1,4 +1,4 @@
-Attribute VB_Name = "searchAndPaint"
+Attribute VB_Name = "m_searchAndPaint"
 Option Explicit
 
 

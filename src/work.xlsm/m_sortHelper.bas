@@ -1,4 +1,4 @@
-Attribute VB_Name = "sortHelper"
+Attribute VB_Name = "m_sortHelper"
 Option Explicit
 
 ' ********************************************

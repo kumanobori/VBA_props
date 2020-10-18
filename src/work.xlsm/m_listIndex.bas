@@ -1,4 +1,4 @@
-Attribute VB_Name = "listIndex"
+Attribute VB_Name = "m_listIndex"
 Option Explicit
 
 ' ************************************************************

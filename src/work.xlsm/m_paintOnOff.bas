@@ -1,4 +1,4 @@
-Attribute VB_Name = "paintOnOff"
+Attribute VB_Name = "m_paintOnOff"
 Option Explicit
 ' ********************************************************************************
 ' * 選択しているセル全てに対して、色無しのセルは指定色、指定色のセルは色無しに塗り替える。

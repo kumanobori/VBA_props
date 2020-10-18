@@ -1,4 +1,4 @@
-Attribute VB_Name = "cellValueToCommentTest"
+Attribute VB_Name = "m_cellValueToCommentTest"
 Option Explicit
 Option Private Module
 

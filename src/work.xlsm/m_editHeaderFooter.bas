@@ -1,4 +1,4 @@
-Attribute VB_Name = "editHeaderFooter"
+Attribute VB_Name = "m_editHeaderFooter"
 Option Explicit
 
 ' **********************************************

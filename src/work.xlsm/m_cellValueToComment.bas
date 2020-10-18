@@ -1,4 +1,4 @@
-Attribute VB_Name = "cellValueToComment"
+Attribute VB_Name = "m_cellValueToComment"
 Option Explicit
 
 ' ****************************************
